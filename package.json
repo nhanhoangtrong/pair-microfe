@@ -1,6 +1,13 @@
 {
   "name": "pair-microfe",
   "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "app",
+      "header"
+    ]
+  },
   "main": "index.js",
   "repository": "https://github.com/nhanhoangtrong/pair-microfe",
   "author": "Nhan Hoang Trong <nhan.hoang2@tiki.vn>",
