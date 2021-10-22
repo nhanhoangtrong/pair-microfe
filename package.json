@@ -1,0 +1,11 @@
+{
+  "name": "pair-microfe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nhanhoangtrong/pair-microfe",
+  "author": "Nhan Hoang Trong <nhan.hoang2@tiki.vn>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.3.0"
+  }
+}
