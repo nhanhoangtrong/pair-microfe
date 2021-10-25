@@ -1,9 +1,18 @@
 const { resolve } = require('path');
+const { ModuleFederationPlugin } = require("webpack").container;
+const path = require("path");
 
 module.exports = {
     mode: 'development',
     target: 'web',
     entry: './src/index.js',
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist"),
+        },
+        port: 3002,
+        allowedHosts: 'all',
+    },
     output: {
         path: resolve(__dirname, 'dist'),
         filename: 'header.js',
@@ -22,4 +31,23 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new ModuleFederationPlugin({
+            name: 'header',
+            filename: 'remote.js',
+            exposes: {
+              './Header': './src/index.js'
+            },
+            shared: {
+                react: {
+                    singleton: true,
+                    eager: true
+                },
+                "react-dom": {
+                    singleton: true,
+                    eager: true
+                }
+            }
+        })
+    ]
 };
