@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "header": "1.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "scripts": {
-    "start": "serve -l tcp://0.0.0.0:3001 dist",
+    "start": "webpack serve",
     "build": "webpack --progress"
   },
   "license": "MIT",

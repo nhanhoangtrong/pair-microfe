@@ -1,5 +1,4 @@
-import React from "react";
-import App from "./App";
-import ReactDOM from "react-dom";
+// force main app to run after shared module
+// https://webpack.js.org/concepts/module-federation/#uncaught-error-shared-module-is-not-available-for-eager-consumption
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import('./bootstrap');

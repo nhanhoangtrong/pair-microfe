@@ -1,5 +1,14 @@
 # Pair Coding MicroFE
 
+## Usage
+<pre>
+yarn install
+cd header && yarn start -> start header server
+cd ../app && yarn start -> start main app server
+
+<strong><i>Main app will be served at localhost:3001</i></strong>
+</pre>
+
 ## Scenario
 
 ### 1. Main app
@@ -22,7 +31,7 @@
 - Sau khi build header, serve nó ở 1 cái endpoint
 - App (container) request tới Header khi cần
 
-
+<pre>
 App
 """""""""""""""""""""""""""""""""
 "Header                         "
@@ -31,3 +40,10 @@ App
 "Main                           "
 "                               "
 """""""""""""""""""""""""""""""""
+</pre>
+
+# Updates
+## 25/10/2021
+- Able to start main app with remote header from other host using module federation
+
+<strong>Next question: </strong> If we import shared module from outside, how would it affect to performance?
